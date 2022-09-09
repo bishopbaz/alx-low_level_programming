@@ -6,7 +6,7 @@
  * Description: Using the main funcion
  * This program prints "Programming is like building a multilingual puzzle
  * 
- * Return: Always 0 (success)
+ * Return: Always return 0
  */
 int main(void)
 {
