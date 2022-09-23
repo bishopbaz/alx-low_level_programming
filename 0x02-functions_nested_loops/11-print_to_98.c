@@ -1,33 +1,38 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - sums nultplies of 3 or 5
+ * print_to_98 - Check Holberton
+ * @n: A input integer
+ * Description: function that prints all natural numbers
+ * from n to 98, followed by a new line.
  *
- * Description: multiples between 0 and 1024
- * Return: Always(0) Success
+ * Return: Nothing
  */
 
-int main(void)
+void print_to_98(int n)
 {
-	int start_num, end_num, total;
-
-	end_num = 1024;
-	total = 0;
-
-	for (start_num = 0; start_num < end_num; start_num++)
+	if (n <= 98)
 	{
-		if ((start_num % 3 == 0) || (start_num % 5 == 0))
+		for (; n <= 98; n++)
 		{
-			total = total + start_num;
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
 		}
-		else
-		{
-			continue;
-		}
+		printf("\n");
 	}
-
-	printf("%d", total);
-	printf("\n");
-
-	return (0);
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
+	}
 }
